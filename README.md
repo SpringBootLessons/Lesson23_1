@@ -1,4 +1,4 @@
-# Lesson 23_6 - Hiding Irrelevant content
+# Lesson 23_1 - Hiding Irrelevant content
 
 ## Learning Objectives
 * Hiding irrelevant content and showing only the content that is related the
