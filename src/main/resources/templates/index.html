@@ -9,7 +9,7 @@
 <div sec:authorize="isAuthenticated()">
     <h3>
     Logged user: <span sec:authentication="name" />
-        <img style="border-radius: 50%; width: 35px; height: 53px;"
+        <img style="border-radius: 50%; width: 35px; height: 35px;"
                 th:src="${user.userImage}" />
     </h3>
     This content is only shown to authenticated users.<br />

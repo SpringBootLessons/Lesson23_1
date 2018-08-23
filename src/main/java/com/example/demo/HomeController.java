@@ -16,6 +16,7 @@ import java.security.Principal;
 
 @Controller
 public class HomeController {
+
     @Autowired
     private UserService userService;
 
@@ -28,7 +29,6 @@ public class HomeController {
     @RequestMapping(value="/register", method=RequestMethod.POST)
     public String processRegistrationPage(@Valid @ModelAttribute("user") User user,
                                           BindingResult result, Model model) {
-
         model.addAttribute("user", user);
         if (result.hasErrors()) {
             return "registration";
@@ -39,7 +39,6 @@ public class HomeController {
         }
         return "index";
     }
-
 
     @RequestMapping("/")
     public String index(Authentication currentUserDetails, Model model) {
