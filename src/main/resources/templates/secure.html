@@ -9,9 +9,9 @@
 <h1>Secure Page</h1>
 <div sec:authorize="isAuthenticated()">
     <h3>
-        Logged user: <span sec:authentication="name" />
-        <img style="border-radius: 50%;"
-             src="http://gravatar.com/avatar/d83c9bca2b678b35596a8d288d74a466?s=35" />
+        Logged user: <span sec:authentication="name" >
+        <img style="border-radius: 50%; width: 35px; height: 35px;"
+             th:src="${user.userImage}" />
     </h3>
 
 </div>
