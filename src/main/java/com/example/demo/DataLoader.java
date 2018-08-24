@@ -29,30 +29,30 @@ public class DataLoader implements CommandLineRunner {
     Role adminRole = roleRepository.findByRole("ADMIN");
     Role userRole = roleRepository.findByRole("USER");
 
-    String image = "https://secure.gravatar.com/avatar/?size=35";
+    String userImageUrl = "https://secure.gravatar.com/avatar/?size=35";
 
     User user = new User("bob@bob.com","bob","Bob",
-            "Bobberson", true, "bob", image);
+            "Bobberson", true, "bob", userImageUrl);
     user.setRoles(Arrays.asList(userRole));
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     userRepository.save(user);
 
     user = new User("jim@jim.com","jim","Jim",
-            "Jimmerson", true, "jim", image);
+            "Jimmerson", true, "jim", userImageUrl);
     user.setRoles(Arrays.asList(userRole));
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     userRepository.save(user);
 
     user = new User("sam@every.com","password","Sam",
-            "Everyman", true, "everyman", image);
+            "Everyman", true, "everyman", userImageUrl);
     user.setRoles(Arrays.asList(userRole, adminRole));
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     userRepository.save(user);
 
-    String image1 = "http://gravatar" +
+    String adminImageUrl = "http://gravatar" +
             ".com/avatar/d83c9bca2b678b35596a8d288d74a466?s=35";
     user = new User("admin@secure.com","password",
-            "Admin","User", true, "admin", image1);
+            "Admin","User", true, "admin", adminImageUrl);
     user.setRoles(Arrays.asList(adminRole));
     user.setPassword(passwordEncoder.encode(user.getPassword()));
     userRepository.save(user);
