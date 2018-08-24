@@ -121,7 +121,7 @@ public String index(Authentication currentUserDetails, Model model) {
 <h1>Home Page</h1>
 <div sec:authorize="isAuthenticated()">
     <h3>
-    Logged user: <span sec:authentication="name">
+    Logged user: <span sec:authentication="name"></span>
         <img style="border-radius: 50%; width: 35px; height: 35px;"
                 th:src="${user.userImage}" />
     </h3>
@@ -168,7 +168,7 @@ public String index(Authentication currentUserDetails, Model model) {
 <h1>Secure Page</h1>
 <div sec:authorize="isAuthenticated()">
     <h3>
-        Logged user: <span sec:authentication="name" >
+        Logged user: <span sec:authentication="name"></span>
         <img style="border-radius: 50%; width: 35px; height: 35px;"
              th:src="${user.userImage}" />
     </h3>
